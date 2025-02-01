@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>主页面</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    
+    <div class="sidebar">
+        <!-- sidebar是侧边栏控件，ul是无序列表控件 -->
+        <ul>
+            <li>
+                项目设置与初始化
+                <ul>
+                    <li onclick="select_folder()">选择项目文件夹</li>
+                    <li onclick="set_up()">项目信息设置</li>
+                    <li onclick="import_account_balance_sheet()">导入本期科目余额表</li>
+                    <li onclick="import_chronological_account()">导入本期序时账 / 凭证列表</li>
+                    <li onclick="import_balance_sheet()">导入未审资产负债表</li>
+                    <li onclick="import_income_statement()">导入未审利润表</li>
+                    <li onclick="import_cash_flow_statement()">导入未审现金流量表</li>
+                    <li onclick="import_previous_trial_balance()">导入往期试算平衡表</li>
+                    <li onclick="initialize()">数据初始化</li>
+                </ul>
+            </li>
+            
+            <li>
+                审计程序
+                <ul>
+                    <li onclick="walk_through_test()">穿行测试</li>
+                    <li onclick="examine()">检查</li>
+                    <li onclick="observe()">观察</li>
+                    <li onclick="ask()">询问</li>
+                    <li onclick="confirmation()">函证</li>
+                    <li onclick="recalculate()">重新计算</li>
+                    <li onclick="re_execution()">重新执行</li>
+                    <li onclick="analytical_procedures()">分析性程序</li>
+                </ul>
+            </li>
+
+            <li>
+                永久性档案
+                <ul>
+                    <li onclick="generate_list()">生成资料清单</li>
+                    <li onclick="import_file()">导入永久性档案</li>
+                </ul>
+            </li>
+
+            <li>
+                初步业务活动
+                <ul>
+                    <li onclick="initial_business_activities_schedule()">初步业务活动程序表</li>
+                    <li onclick="business_acceptance_evaluation_form()">业务承接评价表</li>
+                    <li onclick="business_retention_evaluation_form()">业务保持评价表</li>
+                    <li onclick="audit_engagement_letter()">审计业务约定书</li>
+                </ul>
+            </li>
+
+            <li>
+                风险评估
+                <ul>
+                    <li onclick="understanding_environment()">一、了解被审计单位及其环境（不包括内部控制）</li>
+                    <li onclick="understanding_internal_controls()">二、了解被审计单位内部控制</li>
+                    <li onclick="discuss_risk_assessment()">三、项目组讨论纪要———风险评估</li>
+                    <li onclick="risk_assessment_summary()">四、风险评估结果汇总表</li>
+                    <li onclick="overall_audit_strategy()">五、总体审计策略</li>
+                </ul>
+            </li>
+
+            <li>
+                控制测试
+                <ul>
+                    <li onclick="purchase_and_payment()">采购与付款循环</li>
+                    <li onclick="salary_and_personnel()">工薪与人事循环</li>
+                    <li onclick="production_and_warehousing()">生产与仓储循环</li>
+                    <li onclick="sales_and_collection()">销售与收款循环</li>
+                    <li onclick="fundraising_and_investment()">筹资与投资循环</li>
+                    <li onclick="fixed_assets_and_other_long_term_capital()">固定资产和其他长期资本循环</li>
+                    <li onclick="monetary_funds_circulation()">货币资金循环</li>
+                </ul>
+            </li>
+
+            <li>
+                实质性程序
+                <ul>
+                    <li onclick="monetary_funds()">货币资金</li>
+                    <li onclick="settlement_reserve()">结算备付金</li>
+                    <li onclick="funds_withdrawn()">拆出资金</li>
+                    <li onclick="trading_financial_assets()">交易性金融资产</li>
+                    <li onclick="derivative_financial_assets()">衍生金融资产</li>
+                    <li onclick="notes_receivable()">应收票据</li>
+                    <li onclick="accounts_receivable()">应收账款</li>
+                    <li onclick="receivables_financing()">应收款项融资</li>
+                    <li onclick="prepayment()">预付款项</li>
+                    <li onclick="premiums_receivable()">应收保费</li>
+                    <li onclick="reinsurance_receivables()">应收分保账款</li>
+                    <li onclick="reinsurance_contract_reserves_receivable()">应收分保合同准备金</li>
+                    <li onclick="other_receivables()">其他应收款</li>
+                    <li onclick="financial_assets_purchased_under_resale_agreements()">买入返售金融资产</li>
+                    <li onclick="stock()">存货</li>
+                    <li onclick="contract_assets()">合同资产</li>
+                    <li onclick="assets_held_for_sale()">持有待售资产</li>
+                    <li onclick="non_current_assets_due_within_one_year()">一年内到期的非流动资产</li>
+                    <li onclick="other_current_assets()">其他流动资产</li>
+                    <li onclick="loans_and_advances()">发放贷款和垫款</li>
+                    <li onclick="debt_investment()">债权投资</li>
+                    <li onclick="other_debt_investments()">其他债权投资</li>
+                    <li onclick="long_term_receivables()">长期应收款</li>
+                    <li onclick="long_term_equity_investment()">长期股权投资</li>
+                    <li onclick="other_equity_instrument_investments()">其他权益工具投资</li>
+                    <li onclick="other_non_current_financial_assets()">其他非流动金融资产</li>
+                    <li onclick="investment_properties()">投资性房地产</li>
+                    <li onclick="fixed_assets()">固定资产</li>
+                    <li onclick="construction_in_progress()">在建工程</li>
+                    <li onclick="productive_biological_assets()">生产性生物资产</li>
+                    <li onclick="oil_and_gas_assets()">油气资产</li>
+                    <li onclick="right_of_use_assets()">使用权资产</li>
+                    <li onclick="intangible_assets()">无形资产</li>
+                    <li onclick="development_expenditure()">开发支出</li>
+                    <li onclick="goodwill()">商誉</li>
+                    <li onclick="long_term_deferred_expenses()">长期待摊费用</li>
+                    <li onclick="deferred_tax_assets()">递延所得税资产</li>
+                    <li onclick="other_non_current_assets()">其他非流动资产</li>
+                    <li onclick="short_term_loans()">短期借款</li>
+                    <li onclick="borrowing_from_the_central_bank()">向中央银行借款</li>
+                    <li onclick="borrowing_funds()">拆入资金</li>
+                    <li onclick="trading_financial_liabilities()">交易性金融负债</li>
+                    <li onclick="derivative_financial_liabilities()">衍生金融负债</li>
+                    <li onclick="notes_payable()">应付票据</li>
+                    <li onclick="accounts_payable()">应付账款</li>
+                    <li onclick="advance_payment()">预收款项</li>
+                    <li onclick="contract_liabilities()">合同负债</li>
+                    <li onclick="selling_and_repurchasing_financial_assets()">卖出回购金融资产款</li>
+                    <li onclick="deposits_from_customers_and_interbank_deposits()">吸收存款及同业存款</li>
+                    <li onclick="securities_trading_agency()">代理买卖证券款</li>
+                    <li onclick="securities_underwriting_agency()">代理承销证券款</li>
+                    <li onclick="employee_wages_payable()">应付职工薪酬</li>
+                    <li onclick="taxes_payable()">应交税费</li>
+                    <li onclick="other_accounts_payable()">其他应付款</li>
+                    <li onclick="fees_and_commissions_payable()">应付手续费及佣金</li>
+                    <li onclick="reinsurance_accounts_payable()">应付分保账款</li>
+                    <li onclick="liabilities_held_for_sale()">持有待售负债</li>
+                    <li onclick="non_current_liabilities_due_within_one_year()">一年内到期的非流动负债</li>
+                    <li onclick="other_current_liabilities()">其他流动负债</li>
+                    <li onclick="insurance_contract_reserves()">保险合同准备金</li>
+                    <li onclick="long_term_loans()">长期借款</li>
+                    <li onclick="bonds_payable()">应付债券</li>
+                    <li onclick="lease_liabilities()">租赁负债</li>
+                    <li onclick="long_term_payables()">长期应付款</li>
+                    <li onclick="estimated_liabilities()">预计负债</li>
+                    <li onclick="deferred_income()">递延收益</li>
+                    <li onclick="deferred_tax_liabilities()">递延所得税负债</li>
+                    <li onclick="other_non_current_liabilities()">其他非流动负债</li>
+                    <li onclick="capital()">实收资本（或股本）</li>
+                    <li onclick="other_equity_instruments()">其他权益工具</li>
+                    <li onclick="capital_reserve()">资本公积</li>
+                    <li onclick="treasury_stock()">减：库存股</li>
+                    <li onclick="other_comprehensive_income()">其他综合收益</li>
+                    <li onclick="special_reserves()">专项储备</li>
+                    <li onclick="surplus_reserve()">盈余公积</li>
+                    <li onclick="general_risk_provision()">一般风险准备</li>
+                    <li onclick="undistributed_profit()">未分配利润</li>
+                    <li onclick="operating_income()">营业收入</li>
+                    <li onclick="interest_income()">利息收入</li>
+                    <li onclick="premiums_earned()">已赚保费</li>
+                    <li onclick="fee_and_commission_income()">手续费及佣金收入</li>
+                    <li onclick="operating_costs()">营业成本</li>
+                    <li onclick="interest_expense()">利息支出</li>
+                    <li onclick="fees_and_commissions()">手续费及佣金支出</li>
+                    <li onclick="surrender_benefit()">退保金</li>
+                    <li onclick="net_compensation_expense()">赔付支出净额</li>
+                    <li onclick="net_amount_of_insurance_liability_reserve_withdrawal()">提取保险责任准备金净额</li>
+                    <li onclick="policy_dividend_payout()">保单红利支出</li>
+                    <li onclick="reinsurance_expenses()">分保费用</li>
+                    <li onclick="taxes_and_surcharges()">税金及附加</li>
+                    <li onclick="sales_expenses()">销售费用</li>
+                    <li onclick="management_fees()">管理费用</li>
+                    <li onclick="research_and_development_expenses()">研发费用</li>
+                    <li onclick="financial_expenses()">财务费用</li>
+                    <li onclick="other_benefits()">其他收益</li>
+                    <li onclick="investment_income()">投资收益</li>
+                    <li onclick="exchange_gains()">汇兑收益</li>
+                    <li onclick="net_exposure_hedging_income()">净敞口套期收益</li>
+                    <li onclick="gains_from_changes_in_fair_value()">公允价值变动收益</li>
+                    <li onclick="credit_impairment_losses()">信用减值损失</li>
+                    <li onclick="asset_impairment_losses()">资产减值损失</li>
+                    <li onclick="proceeds_from_asset_disposal()">资产处置收益</li>
+                    <li onclick="non_operating_income()">营业外收入</li>
+                    <li onclick="non_operating_expenses()">营业外支出</li>
+                    <li onclick="income_tax_expense()">所得税费用</li>
+                </ul>
+            </li>
+
+            <li>
+                其他项目
+                <ul>
+                    <li onclick="fraud_risk_assessment_and_response()">舞弊风险评估与应对</li>
+                    <li onclick="considerations_of_laws_and_regulations()">对法律法规的考虑</li>
+                    <li onclick="communication_with_former_cpa()">接受委托后与前任注册会计师的沟通</li>
+                    <li onclick="related_parties_and_related_party_transactions()">关联方及关联方交易</li>
+                    <li onclick="going_concern()">持续经营</li>
+                    <li onclick="audit_of_opening_balances()">首次接受委托时对期初余额的审计</li>
+                    <li onclick="accounting_estimates()">会计估计</li>
+                    <li onclick="subsequent_events()">期后事项</li>
+                    <li onclick="corresponding_data()">对应数据</li>
+                    <li onclick="additional_information()">含有已审计财务报表的文件中的其他信息</li>
+                    <li onclick="group_financial_statement_audit()">对集团财务报表审计的特殊考虑</li>
+                    <li onclick="litigation_and_claims()">诉讼和索赔</li>
+                    <li onclick="leverage_the_expertise_of_cpas()">利用注册会计师的专家的工作</li>
+                    <li onclick="leverage_management_expertise()">利用管理层的专家的工作</li>
+                    <li onclick="segment_information()">分部信息</li>
+                    <li onclick="leverage_internal_auditors()">利用内部审计人员的工作</li>
+                </ul>
+            </li>
+
+            <li>
+                完成审计工作
+                <ul>
+                    <li onclick="business_completion_audit()">业务完成阶段审计工作</li>
+                    <li onclick="misstatement_cumulative_and_evaluation_table()">错报累积和评价表</li>
+                    <li onclick="trial_balance()">试算平衡表</li>
+                    <li onclick="summary_meeting_minutes()">总结会会议纪要</li>
+                    <li onclick="communication_with_those_charged_with_governance()">与治理层的沟通函</li>
+                    <li onclick="project_manager_review_statement()">项目经理复核声明书</li>
+                    <li onclick="project_partner_review_statement()">项目合伙人复核声明书</li>
+                    <li onclick="quality_control_reviewer_review_statement()">质量控制复核人复核声明书</li>
+                    <li onclick="management_statement()">管理层声明书</li>
+                    <li onclick="audit_summary()">审计总结</li>
+                    <li onclick="audit_work_completion_checklist()">审计工作完成情况核对表</li>
+                    <li onclick="issue_audit_report()">出具审计报告</li>
+                    <li onclick="archiving_and_exporting()">归档与导出</li>
+                </ul>
+            </li>
+        </ul>
+
+    </div>
+
+    <div class="content" id="content"></div>
+
+    <script type="module" src="index.js"></script>
+
+</body>
+</html>
