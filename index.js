@@ -2,7 +2,7 @@
 
 import { select_folder } from './set_up_and_initialize/si_select_folder/select_folder.js';
 import { set_up } from './set_up_and_initialize/si_set_up/set_up.js';
-// import { import_qcc_report } from './set_up_and_initialize/si_import_qcc_excel_report/import_qcc_excel_report.js';
+import { generate_audit_report } from './audit_procedures/ap_generate_audit_report/generate_audit_report.js';
 
 document.querySelectorAll('.sidebar > ul > li').forEach(item => {
     item.addEventListener('click', function (e) {
@@ -121,6 +121,16 @@ window.analytical_procedures = function() {
     const contentDiv = document.getElementById('content');
     contentDiv.style.border = 'none';
     contentDiv.innerHTML = `<h1 style="text-align: center; width: 100%;">分析性程序演示页面</h1>`;
+}
+
+window.edit_trial_balance = function() {
+    const contentDiv = document.getElementById('content');
+    contentDiv.style.border = 'none';
+    contentDiv.innerHTML = `<h1 style="text-align: center; width: 100%;">编辑试算平衡表演示页面</h1>`;
+}
+
+window.generate_audit_report = function() {
+    generate_audit_report();
 }
 
 window.generate_list = function() {
@@ -1845,7 +1855,3 @@ window.archiving_and_exporting = function() {
 window.onbeforeunload = () => {
     localStorage.clear();
 };
-
-window.one = function() {
-    page_1();
-}

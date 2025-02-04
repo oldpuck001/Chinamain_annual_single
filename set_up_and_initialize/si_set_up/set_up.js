@@ -7,7 +7,9 @@ export async function set_up() {
     window.project_folder = await ipcRenderer.invoke('get-project-folder');
     const savedResultText = localStorage.getItem('result_text') || '';
 
-    ipcRenderer.send('asynchronous-message', { command: 'import_config', data: { project_folder: window.project_folder } });
+    if (window.project_folder) {
+        ipcRenderer.send('asynchronous-message', { command: 'import_config', data: { project_folder: window.project_folder } });
+    }
 
     // 獲取 DOM 元素
     const contentDiv = document.getElementById('content');
@@ -145,8 +147,6 @@ export async function set_up() {
 
     ipcRenderer.on('asynchronous-reply', (event, result) => {
         if (result[0] === 'import_config') {
-
-            console.log(result[1]['被审计会计期间'])
 
             // 将配置文件中的数据回填到表单
             period_input.value = result[1]['被审计会计期间'];

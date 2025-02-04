@@ -4,7 +4,7 @@ import sys
 import json
 from set_up_and_initialize.si_select_folder import select_folder
 from set_up_and_initialize.si_set_up import set_up
-# from set_up_and_initialize.si_set_up import set_up
+from audit_procedures.ap_generate_audit_report import generate_audit_report
 
 # windows下解决编码问题的语句
 import io
@@ -32,8 +32,8 @@ def main():
         result = set_up.save_settings(request)
 
 
-
-
+    elif request["command"] == "generate_audit_report":
+        result =generate_audit_report.generate_audit_report(request)
 
 
 
