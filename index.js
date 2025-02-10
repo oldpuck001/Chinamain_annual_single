@@ -36,13 +36,15 @@ window.set_up = function() {
 window.import_account_balance_sheet = function() {
     const contentDiv = document.getElementById('content');
     contentDiv.style.border = 'none';
-    contentDiv.innerHTML = `<h1 style="text-align: center; width: 100%;">导入本期科目余额表演示页面</h1>`;
+    contentDiv.innerHTML = `<h1 style="text-align: center; width: 100%;">导入本期科目余额表演示页面</h1>
+                            <li>生成科目余额表</li>`;
 }
 
 window.import_chronological_account = function() {
     const contentDiv = document.getElementById('content');
     contentDiv.style.border = 'none';
-    contentDiv.innerHTML = `<h1 style="text-align: center; width: 100%;">导入本期序时账 / 凭证列表演示页面</h1>`;
+    contentDiv.innerHTML = `<h1 style="text-align: center; width: 100%;">导入本期序时账 / 凭证列表演示页面</h1>
+                            <li>生成序时账</li>`;
 }
 
 window.import_balance_sheet = function() {
@@ -72,7 +74,9 @@ window.import_previous_trial_balance = function() {
 window.initialize = function() {
     const contentDiv = document.getElementById('content');
     contentDiv.style.border = 'none';
-    contentDiv.innerHTML = `<h1 style="text-align: center; width: 100%;">初始化演示页面</h1>`;
+    contentDiv.innerHTML = `<h1 style="text-align: center; width: 100%;">初始化演示页面</h1>
+                            <li>校对修改帐表对应关系</li>
+                            <li>生成试算平衡表</li>`;
 }
 
 window.walk_through_test = function() {
@@ -84,7 +88,8 @@ window.walk_through_test = function() {
 window.examine = function() {
     const contentDiv = document.getElementById('content');
     contentDiv.style.border = 'none';
-    contentDiv.innerHTML = `<h1 style="text-align: center; width: 100%;">检查演示页面</h1>`;
+    contentDiv.innerHTML = `<h1 style="text-align: center; width: 100%;">检查演示页面</h1>
+                            <li>凭证检查集中处理</li>`;
 }
 
 window.observe = function() {
@@ -96,19 +101,22 @@ window.observe = function() {
 window.ask = function() {
     const contentDiv = document.getElementById('content');
     contentDiv.style.border = 'none';
-    contentDiv.innerHTML = `<h1 style="text-align: center; width: 100%;">询问演示页面</h1>`;
+    contentDiv.innerHTML = `<h1 style="text-align: center; width: 100%;">询问演示页面</h1>
+                            <li>询问中心</li>`;
 }
 
 window.confirmation = function() {
     const contentDiv = document.getElementById('content');
     contentDiv.style.border = 'none';
-    contentDiv.innerHTML = `<h1 style="text-align: center; width: 100%;">函证演示页面</h1>`;
+    contentDiv.innerHTML = `<h1 style="text-align: center; width: 100%;">函证演示页面</h1>
+                            <li>函证集中处理</li>`;
 }
 
 window.recalculate = function() {
     const contentDiv = document.getElementById('content');
     contentDiv.style.border = 'none';
-    contentDiv.innerHTML = `<h1 style="text-align: center; width: 100%;">重新计算演示页面</h1>`;
+    contentDiv.innerHTML = `<h1 style="text-align: center; width: 100%;">重新计算演示页面</h1>
+                            <li>测算集中处理</li>`;
 }
 
 window.re_execution = function() {
@@ -120,7 +128,8 @@ window.re_execution = function() {
 window.analytical_procedures = function() {
     const contentDiv = document.getElementById('content');
     contentDiv.style.border = 'none';
-    contentDiv.innerHTML = `<h1 style="text-align: center; width: 100%;">分析性程序演示页面</h1>`;
+    contentDiv.innerHTML = `<h1 style="text-align: center; width: 100%;">分析性程序演示页面</h1>
+                            <li>分析程序</li>`;
 }
 
 window.edit_trial_balance = function() {

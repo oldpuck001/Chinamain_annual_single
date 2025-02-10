@@ -17,18 +17,21 @@ def import_config(request):
 
 def import_qcc(request):
 
-    qcc_file_path = request.get('data', {}).get('qcc_file_path', '')
+    file_path = request.get('data', {}).get('qcc_file_path', '')
 
-    file_extension = qcc_file_path.split('.')[-1]
+    file_extension = os.path.splitext(file_path)[1].lower()
 
-    if file_extension == 'xls':
-        engine = 'xlrd'
-    elif file_extension == 'xlsx':
-        engine = 'openpyxl'
+    if file_extension == '.xlsx':
+        basic_info_df = pd.read_excel(file_path, sheet_name='基本信息', engine='openpyxl')
+    elif file_extension == '.xls':
+        basic_info_df = pd.read_excel(file_path, sheet_name='基本信息', engine='xlrd')
     else:
-        pass
-
-    basic_info_df = pd.read_excel(qcc_file_path, sheet_name='基本信息', engine=engine)
+    # 创建一个字典来保存这些信息
+        info_dict = {'企业名称': '', '成立日期': '', '核准日期': '', '统一社会信用代码': '', '注册资本': '',
+                     '法定代表人': '', '注册地址': '', '经营范围': ''}
+        
+        # 返回数据字典和保存路径
+        return ['import_qcc', info_dict]
     
     # 提取所需信息
     enterprise_name = basic_info_df.iloc[1, 1]               # 企业名称

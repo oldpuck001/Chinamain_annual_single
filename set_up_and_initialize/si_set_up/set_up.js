@@ -176,10 +176,12 @@ export async function set_up() {
             business_scope_input.value = result[1]['经营范围'];
 
             localStorage.setItem('result_text', savedResultText + '读取企查查信用报告（Excel操作版）成功！\n');
+            alert('读取企查查信用报告（Excel操作版）成功！');
 
         } else if (result[0] === 'save_settings') {
 
             localStorage.setItem('result_text', savedResultText + '项目信息设置页面保存项目信息成功！\n');
+            alert('项目信息设置页面保存项目信息成功！');
 
         }
     });

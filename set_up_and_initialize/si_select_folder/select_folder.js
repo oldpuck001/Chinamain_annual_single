@@ -4,6 +4,8 @@ const { ipcRenderer } = require('electron');
 
 export async function select_folder() {
 
+    const savedResultText = localStorage.getItem('result_text') || '';
+    
     const contentDiv = document.getElementById('content');
 
     contentDiv.innerHTML = `
@@ -43,7 +45,6 @@ export async function select_folder() {
     folder_input.value = window.project_folder || '';
 
     // 读取 `localStorage` 中的 result_text 并填充 `textarea`
-    const savedResultText = localStorage.getItem('result_text') || '';
     result_textarea.value = savedResultText;
 
     document.getElementById('selectButton').addEventListener('click', async () => {
