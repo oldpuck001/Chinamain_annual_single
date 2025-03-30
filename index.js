@@ -2,6 +2,7 @@
 
 import { select_folder } from './set_up_and_initialize/si_select_folder/select_folder.js';
 import { set_up } from './set_up_and_initialize/si_set_up/set_up.js';
+import { import_account_balance_sheet } from './set_up_and_initialize/si_import_account_balance_sheet/import_account_balance_sheet.js'
 import { generate_audit_report } from './audit_procedures/ap_generate_audit_report/generate_audit_report.js';
 
 document.querySelectorAll('.sidebar > ul > li').forEach(item => {
@@ -34,10 +35,7 @@ window.set_up = function() {
 }
 
 window.import_account_balance_sheet = function() {
-    const contentDiv = document.getElementById('content');
-    contentDiv.style.border = 'none';
-    contentDiv.innerHTML = `<h1 style="text-align: center; width: 100%;">导入本期科目余额表演示页面</h1>
-                            <li>生成科目余额表</li>`;
+    import_account_balance_sheet();
 }
 
 window.import_chronological_account = function() {

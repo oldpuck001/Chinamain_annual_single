@@ -65,6 +65,8 @@ export async function select_folder() {
         ipcRenderer.send('asynchronous-message', { command: 'select_folder_path', data: data });
     });
 
+    ipcRenderer.removeAllListeners('asynchronous-reply');
+    
     ipcRenderer.on('asynchronous-reply', (event, result) => {
         if (result[0] === 'select_folder_path') {
             result_textarea.value += result[1]['result_message'];               // 追加内容

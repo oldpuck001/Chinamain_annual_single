@@ -145,6 +145,8 @@ export async function set_up() {
         ipcRenderer.send('asynchronous-message', { command: 'save_settings', data: data });
     });
 
+    ipcRenderer.removeAllListeners('asynchronous-reply');
+    
     ipcRenderer.on('asynchronous-reply', (event, result) => {
         if (result[0] === 'import_config') {
 

@@ -79,6 +79,8 @@ export async function generate_audit_report() {
         ipcRenderer.send('asynchronous-message', { command: 'generate_audit_report', data: data });
     });
 
+    ipcRenderer.removeAllListeners('asynchronous-reply');
+    
     ipcRenderer.on('asynchronous-reply', (event, result) => {
         
         if (result[0] === 'generate_audit_report') {

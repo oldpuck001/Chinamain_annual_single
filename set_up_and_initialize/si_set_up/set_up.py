@@ -40,7 +40,7 @@ def import_qcc(request):
     unified_social_credit_code = basic_info_df.iloc[4, 1]    # 统一社会信用代码
     registered_capital = basic_info_df.iloc[2, 3]            # 注册资本
     legal_representative = basic_info_df.iloc[2, 1]          # 法定代表人
-    registered_address = basic_info_df.iloc[13, 1]           # 注册地址
+    registered_address = basic_info_df.iloc[12, 1]           # 注册地址
     business_scope = basic_info_df.iloc[15, 1]               # 经营范围
     
     # 创建一个字典来保存这些信息
