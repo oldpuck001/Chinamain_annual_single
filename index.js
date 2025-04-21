@@ -3,6 +3,8 @@
 import { select_folder } from './set_up_and_initialize/si_select_folder/select_folder.js';
 import { set_up } from './set_up_and_initialize/si_set_up/set_up.js';
 import { import_account_balance_sheet } from './set_up_and_initialize/si_import_account_balance_sheet/import_account_balance_sheet.js'
+import { import_chronological_account } from './set_up_and_initialize/si_import_chronological_account/import_chronological_account.js';
+
 import { generate_audit_report } from './audit_procedures/ap_generate_audit_report/generate_audit_report.js';
 
 document.querySelectorAll('.sidebar > ul > li').forEach(item => {
@@ -39,10 +41,7 @@ window.import_account_balance_sheet = function() {
 }
 
 window.import_chronological_account = function() {
-    const contentDiv = document.getElementById('content');
-    contentDiv.style.border = 'none';
-    contentDiv.innerHTML = `<h1 style="text-align: center; width: 100%;">导入本期序时账 / 凭证列表演示页面</h1>
-                            <li>生成序时账</li>`;
+    import_chronological_account();
 }
 
 window.import_balance_sheet = function() {
