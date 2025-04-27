@@ -6,6 +6,7 @@ from set_up_and_initialize.si_select_folder import select_folder
 from set_up_and_initialize.si_set_up import set_up
 from set_up_and_initialize.si_import_account_balance_sheet import import_account_balance_sheet
 from set_up_and_initialize.si_import_chronological_account import import_chronological_account
+from set_up_and_initialize.si_import_balance_sheet import import_balance_sheet
 
 from audit_procedures.ap_generate_audit_report import generate_audit_report
 
@@ -51,6 +52,13 @@ def main():
 
     elif request["command"] == "export_chronological_account":
         result = import_chronological_account.export_chronological_account(request)
+
+    elif request["command"] == "select_balance_sheet":
+        result = import_balance_sheet.select_balance_sheet(request)
+
+    elif request["command"] == "import_balance_sheet":
+        result = import_balance_sheet.import_balance_sheet(request)
+
 
 
 

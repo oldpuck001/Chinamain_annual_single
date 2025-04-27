@@ -4,6 +4,7 @@ import { select_folder } from './set_up_and_initialize/si_select_folder/select_f
 import { set_up } from './set_up_and_initialize/si_set_up/set_up.js';
 import { import_account_balance_sheet } from './set_up_and_initialize/si_import_account_balance_sheet/import_account_balance_sheet.js'
 import { import_chronological_account } from './set_up_and_initialize/si_import_chronological_account/import_chronological_account.js';
+import { import_balance_sheet } from './set_up_and_initialize/si_import_balance_sheet/import_balance_sheet.js';
 
 import { generate_audit_report } from './audit_procedures/ap_generate_audit_report/generate_audit_report.js';
 
@@ -45,9 +46,7 @@ window.import_chronological_account = function() {
 }
 
 window.import_balance_sheet = function() {
-    const contentDiv = document.getElementById('content');
-    contentDiv.style.border = 'none';
-    contentDiv.innerHTML = `<h1 style="text-align: center; width: 100%;">导入未审资产负债表演示页面</h1>`;
+    import_balance_sheet();
 }
 
 window.import_income_statement = function() {
